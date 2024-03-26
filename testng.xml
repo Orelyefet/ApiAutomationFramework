@@ -1,19 +1,22 @@
-<?xml version = "1.0" encoding = "UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-
-<suite name="PetSuite">
-
-    <listeners>
-        <listener class-name="api.utilities.ExtentReportManager"/>
-    </listeners>
-
-    <test thread-count="5" name="PetTests">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/orely/Programming/Automation/RestApiFrameWorkProject">
         <classes>
+            <class name="api.test.DDTests">
+                <methods>
+                    <include name="testPostUser"/>
+                    <include name="testDeleteUserByName"/>
+                </methods>
+            </class>
             <class name="api.test.UserTests">
-                <!-- <class name="api.test.UserTests"/> -->
+                <methods>
+                    <include name="testPostUser"/>
+                    <include name="testGetUserByName"/>
+                    <include name="testUpdateUserByName"/>
+                    <include name="testDeleteUserByName"/>
+                </methods>
             </class>
         </classes>
     </test>
 </suite>
-
-
